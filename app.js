@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const cricketersRoute = require('./routes/cricketers');
+const 2011WorldCup  = require('./controllers/2011WorldCup');
+app.use('/wc11', 2011WorldCup);
 app.use('/cricketers', cricketersRoute);
 app.use(cors())
 app.use(express.json());
